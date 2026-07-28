@@ -1,0 +1,25 @@
+name: Build & Package Focus Dashboard Extension
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Create Zip Package
+        run: |
+          zip -r focus-dashboard-extension.zip manifest.json index.html blocked.html offscreen.html offscreen.js background.js src styles
+
+      - name: Upload Build Artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: focus-dashboard-extension
+          path: focus-dashboard-extension.zip
