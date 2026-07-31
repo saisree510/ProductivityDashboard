@@ -1,0 +1,72 @@
+/* Scratch Pad Component Styles — Compact Hero Row Widget */
+
+.scratch-pad-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  padding: 0.85rem 1rem;
+  width: 100%;
+  height: clamp(180px, 26vh, 230px);
+  box-sizing: border-box;
+}
+
+.scratch-pad-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--border-glass);
+}
+
+.scratch-pad-title {
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+.scratch-pad-status {
+  font-size: 0.68rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  transition: color var(--transition-fast);
+}
+
+.scratch-pad-status.saving {
+  color: var(--accent-warning);
+}
+
+.scratch-pad-status.saved {
+  color: var(--accent-success);
+}
+
+/* Textarea Container */
+.scratch-pad-textarea {
+  width: 100%;
+  flex: 1;
+  padding: 0.55rem 0.75rem;
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--text-primary);
+  background: var(--surface-glass);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-sm);
+  outline: none;
+  resize: none;
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.scratch-pad-textarea::placeholder {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.scratch-pad-textarea:focus {
+  border-color: var(--accent-focus);
+  box-shadow: 0 0 0 3px var(--accent-focus-glow);
+}

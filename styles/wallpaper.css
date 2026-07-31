@@ -1,0 +1,42 @@
+/* Wallpaper Engine Styles */
+
+#wallpaper-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s ease-out;
+  transform: scale(1.02);
+}
+
+#wallpaper-backdrop.loaded {
+  transform: scale(1);
+}
+
+/* Fallback High-Quality Deep Gradient Backdrops */
+.wallpaper-default-1 {
+  background-image: radial-gradient(circle at 20% 20%, #1e1b4b 0%, #0f172a 40%, #090d16 100%),
+                    radial-gradient(circle at 80% 80%, #311042 0%, transparent 50%);
+}
+
+.wallpaper-default-2 {
+  background-image: radial-gradient(circle at 50% 30%, #064e3b 0%, #022c22 45%, #050b14 100%),
+                    radial-gradient(circle at 80% 20%, #0284c7 0%, transparent 40%);
+}
+
+.wallpaper-default-3 {
+  background-image: radial-gradient(circle at 70% 20%, #431407 0%, #1c1917 50%, #0c0a09 100%),
+                    radial-gradient(circle at 20% 80%, #b45309 0%, transparent 45%);
+}
+
+#wallpaper-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  background-color: rgba(11, 15, 25, 0.4);
+  backdrop-filter: brightness(0.9) contrast(1.05);
+  pointer-events: none;
+  transition: background-color 0.3s ease;
+}

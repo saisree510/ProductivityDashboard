@@ -1,0 +1,27 @@
+/* Dynamic Time-based Greeting Component Styles */
+
+.greeting-container {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  user-select: none;
+}
+
+.greeting-text {
+  font-family: var(--font-heading);
+  font-size: clamp(1.25rem, 3vw, 1.85rem);
+  font-weight: 600;
+  color: var(--text-primary);
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.35));
+}
+
+.greeting-name {
+  color: var(--text-primary);
+  border-bottom: 2px solid transparent;
+  transition: border-color var(--transition-fast);
+  cursor: pointer;
+}
+
+.greeting-name:hover {
+  border-color: var(--border-glass-light);
+}

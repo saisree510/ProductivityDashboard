@@ -1,0 +1,54 @@
+/* Deep Focus CTA Button Component Styles */
+
+.deep-focus-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.65rem 1.4rem;
+  font-family: var(--font-heading);
+  font-size: 0.92rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: white;
+  background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--radius-full);
+  box-shadow: 0 0 24px rgba(99, 102, 241, 0.45), 0 4px 16px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  outline: none;
+  transition: all var(--transition-normal);
+  user-select: none;
+}
+
+.deep-focus-btn:hover {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 0 32px rgba(99, 102, 241, 0.65), 0 8px 24px rgba(0, 0, 0, 0.4);
+}
+
+.deep-focus-btn:active {
+  transform: translateY(0) scale(0.98);
+}
+
+/* Active Session Glowing State */
+.deep-focus-btn.active {
+  background: linear-gradient(135deg, #ff5252 0%, #dc2626 100%);
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 0 28px rgba(255, 82, 82, 0.55);
+  animation: deepFocusPulse 2.2s infinite ease-in-out;
+}
+
+.deep-focus-btn.active:hover {
+  box-shadow: 0 0 36px rgba(255, 82, 82, 0.75);
+}
+
+@keyframes deepFocusPulse {
+  0% {
+    box-shadow: 0 0 16px rgba(255, 82, 82, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 32px rgba(255, 82, 82, 0.75);
+  }
+  100% {
+    box-shadow: 0 0 16px rgba(255, 82, 82, 0.4);
+  }
+}

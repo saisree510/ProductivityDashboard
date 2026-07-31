@@ -1,0 +1,62 @@
+/* Focus Dashboard — Micro-Animations & Aesthetic Polish */
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes checkmarkPop {
+  0% {
+    transform: scale(0.6);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes pulseGlow {
+  0% {
+    box-shadow: 0 0 12px var(--accent-focus-glow);
+  }
+  50% {
+    box-shadow: 0 0 24px var(--accent-focus-glow);
+  }
+  100% {
+    box-shadow: 0 0 12px var(--accent-focus-glow);
+  }
+}
+
+@keyframes modalSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Global Animation Utility Classes */
+.animate-fade-in {
+  animation: fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-pop {
+  animation: checkmarkPop 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* Smooth Focus Ring Accessibility */
+:focus-visible {
+  outline: 2px solid var(--accent-focus);
+  outline-offset: 3px;
+}

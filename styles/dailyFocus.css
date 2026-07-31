@@ -1,0 +1,100 @@
+/* Daily Focus Component Styles */
+
+.daily-focus-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  width: 100%;
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+/* Prompt State */
+.daily-focus-prompt-label {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
+}
+
+.daily-focus-input-wrapper {
+  width: 100%;
+  position: relative;
+}
+
+.daily-focus-input {
+  width: 100%;
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: 500;
+  padding: 0.85rem 1.35rem;
+  background: var(--surface-card);
+  border: 1px solid var(--border-glass-light);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  box-shadow: var(--glass-shadow);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.daily-focus-input:focus {
+  outline: none;
+  border-color: var(--accent-focus);
+  box-shadow: 0 0 0 4px var(--accent-focus-glow), var(--glass-shadow);
+}
+
+/* Hyperlink Display State */
+.daily-focus-link-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0.25rem 0;
+}
+
+.daily-focus-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: clamp(1.25rem, 3vw, 1.65rem);
+  font-weight: 600;
+  color: var(--text-primary);
+  text-decoration: none;
+  word-break: break-word;
+  position: relative;
+  padding: 0.65rem 1.75rem;
+  border-radius: var(--radius-md);
+  background: var(--surface-card);
+  border: 1px solid var(--border-glass-light);
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  box-shadow: var(--glass-shadow);
+  transition: all var(--transition-fast);
+}
+
+.daily-focus-link:hover {
+  color: var(--text-primary);
+  background: var(--surface-glass-hover);
+  border-color: var(--border-glass-light);
+  box-shadow: 0 0 20px var(--accent-focus-glow), var(--glass-shadow);
+  transform: translateY(-1px);
+}
+
+.daily-focus-link::after {
+  content: ' ✏️';
+  font-size: 0.85em;
+  opacity: 0;
+  margin-left: 0.4rem;
+  transition: opacity var(--transition-fast);
+}
+
+.daily-focus-link:hover::after {
+  opacity: 0.8;
+}
