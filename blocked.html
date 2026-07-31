@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Focus Mode Active — Focus Dashboard</title>
+  <link rel="stylesheet" href="styles/blocked.css">
+</head>
+<body>
+  <div class="blocked-card">
+    <span class="blocked-badge">🔒 Focus Mode Active</span>
+
+    <h1 class="blocked-heading">Stay on track. This site is blocked.</h1>
+
+    <div class="blocked-focus-box">
+      <div class="blocked-focus-label">Today's Main Focus</div>
+      <div id="blocked-focus-text" class="blocked-focus-text">--</div>
+    </div>
+
+    <div id="blocked-timer-display" class="blocked-timer-display">
+      Focus session in progress
+    </div>
+
+    <div class="blocked-actions">
+      <button id="blocked-return-btn" class="glass-button blocked-btn-primary">
+        🛡️ Return to Safety
+      </button>
+      <button id="blocked-disable-btn" class="glass-button blocked-btn-secondary">
+        Disable Focus Mode
+      </button>
+    </div>
+  </div>
+
+  <script type="module" src="src/pages/blocked.js"></script>
+</body>
+</html>

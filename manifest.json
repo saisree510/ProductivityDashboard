@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "Focus Dashboard — Deep Focus New Tab",
+  "version": "1.0.0",
+  "description": "Distraction-free productivity workspace for your Chrome New Tab page with Pomodoro timer, ambient sounds, website blocking, tasks & daily focus.",
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "permissions": [
+    "storage",
+    "declarativeNetRequest",
+    "alarms",
+    "notifications",
+    "offscreen"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["blocked.html", "styles/*", "src/*"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "Focus Dashboard"
+  }
+}
